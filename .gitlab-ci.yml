@@ -1,0 +1,17 @@
+image: registry.eeo-inc.com/newbee/fe-ci:v1.6
+
+before_script:
+  - node -v
+  - npm -v
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - npm -v
+    # - npm run test
+  tags:
+    - newbee
+  allow_failure: false
